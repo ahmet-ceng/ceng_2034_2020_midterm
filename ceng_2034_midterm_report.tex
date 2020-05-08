@@ -1,0 +1,65 @@
+\documentclass[onecolumn]{article}
+%\usepackage{url}
+%\usepackage{algorithmic}
+\usepackage[a4paper]{geometry}
+\usepackage{datetime}
+\usepackage[margin=2em, font=small,labelfont=it]{caption}
+\usepackage{graphicx}
+\usepackage{mathpazo} % use palatino
+\usepackage[scaled]{helvet} % helvetica
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{subfigure}
+% Letterspacing macros
+\newcommand{\spacecaps}[1]{\textls[200]{\MakeUppercase{#1}}}
+\newcommand{\spacesc}[1]{\textls[50]{\textsc{\MakeLowercase{#1}}}}
+
+\title{\spacecaps{Assignment Report 1: Process and Thread Implementation}\\ \normalsize \spacesc{CENG2034, Operating Systems} }
+
+\author{Ahmet Oral\\ahmetoral@posta.mu.edu.tr\\https://github.com/ahmet\-ceng/ceng\_2034\_2020\_midterm}
+%\date{\today\\\currenttime}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+
+
+\section{Introduction}
+In this assignment I practice some basics about operating systems.I coded a python program to print required parameters and check url's.My goal is to learn and practice as much as I could,while coding required script.
+\section{Assignments}
+My objective was to write a script that; checks url's and prints PID,loadavg,cpu core count.Also program should close itself if loadavg value is near to the cpu core count.I stared by researching what I didn't know,then step by step I implemented what I needed to.
+\subsection{Assignment}
+I coded required values as shown in the photos below.
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{report ahmet oral/OS_Code1.png}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=10cm]{report ahmet oral/OS_Code2.png}
+\centering
+\end{figure}
+
+
+
+\section{Results}
+\begin{figure}[h]
+\includegraphics[width=10cm]{report ahmet oral/OS Output.png}
+\centering
+\end{figure}
+
+As shown in the photo,program checks url's and prints if it's working or not.Then program prints PID,load averages and nproc.After that we see there is a note that says "Program will end itself if: nproc - min loadavg \<1" and it keeps working.5 minute loadavg is constantly changing and program will keep working unless those 2 values are close to each other.There is a comment in the second while loop saying \#print(load5).I put this command to check if my code is working and how the load5 changes over time.If you decide to delete the \# in that line you can see the 5 mi load avg value changing over and over (outputs per second becomes crazy tho :D ).
+
+
+\section{Conclusion}    
+Most important lesson I learned from this project is reading all of the assignment carefully.At first I didn't notice the "*Implement this with threads" at the end of part 4 :D ,so I had to change my code.If I didn't realised that I would get less point or if project was complicated and hard maybe I wouldn't have enough time to chance it.Besides that the project was fun to do and because I used linux, I got chance practiced some of the things I forget.Also now I know I can check url's and take some basic system information.All in all this assignment contributed new skills to me and I enjoyed doing it.
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
